@@ -1,0 +1,14 @@
+#1 Count how many lines there are in each file
+wc -l ~/Documents/CMEECourseWork/Week1/Data/fasta/*.fasta
+
+#2 Print everything starting from the second line for the E. coli genome
+tail -n +2 ~/Documents/CMEECourseWork/Week1/Data/fasta/E.coli.fasta
+
+#3 Count the sequence length of this genome
+tail -n +2 ~/Documents/CMEECourseWork/Week1/Data/fasta/E.coli.fasta | tr -d '\n' | wc -c
+
+#4 Count the matches of a particular sequence, “ATGC” in the genome of E. coli
+tail -n +2 ~/Documents/CMEECourseWork/Week1/Data/fasta/E.coli.fasta | tr -d '\n' | grep -o "ATGC" | wc -l
+
+#5 Compute the AT/GC ratio
+tail -n +2 ~/Documents/CMEECourseWork/Week1/Data/fasta/E.coli.fasta | tr -d '\n' | awk '{a=gsub(/A/,""); t=gsub(/T/,""); g=gsub(/G/,""); c=gsub(/C/,""); if((g+c)>0) print (a+t)/(g+c); else print "NaN"}'
