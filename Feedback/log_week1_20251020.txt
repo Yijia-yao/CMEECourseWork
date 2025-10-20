@@ -1,0 +1,357 @@
+======================================================================
+AUTOMATED FEEDBACK LOG
+======================================================================
+
+HOW TO READ THIS FEEDBACK:
+--------------------------
+1. This log contains detailed feedback on your code execution
+2. Each script is tested and results are shown with output and errors
+3. IMPORTANT: Read all the way to the END for a summary and debugging guidance
+4. The summary at the end will help you understand and fix any issues
+5. Scripts are run in a headless environment (no GUI applications)
+
+======================================================================
+
+Starting testing for Yijia Yao
+
+Processing week 1
+
+Your current Git repo size is about 1.41 MiB on disk
+
+Found directories: .git, week1, Feedback
+Found files: .gitignore, README.md
+
+Processing week 1: week1
+
+Found 9 code files to test.
+
+Note: Expected file checking not performed (no FileList provided).
+Expected file checking will only be performed during final assessment.
+
+======================================================================
+Script: csvtospace.sh
+
+Contents:
+
+**********
+#!/bin/sh
+# Author: Yijia
+# Script: csvtospace.sh
+# Desc: Converts comma-separated file to space-separated
+# Arguments: 1 -> CSV file
+# Date: Oct 2025
+
+if [ $# -ne 1 ]; then
+    echo "Error: Please provide ONE input file."
+    echo "Usage: bash csvtospace.sh <file.csv>"
+    exit 1
+fi
+
+infile=$1
+outfile="${infile%.csv}.space.txt"
+
+echo "Converting commas to spaces in $infile ..."
+cat "$infile" | tr "," " " > "$outfile"
+echo "Done! Saved as $outfile"
+exit 0
+
+**********
+
+Output (first 500 chars):
+
+**********
+Error: Please provide ONE input file.
+Usage: bash csvtospace.sh <file.csv>
+
+**********
+No errors.
+======================================================================
+Script: myscript.sh
+
+Contents:
+
+**********
+#!/bin/bash
+echo "This is my first shell script!"
+**********
+
+Output (first 500 chars):
+
+**********
+This is my first shell script!
+
+**********
+No errors.
+======================================================================
+Script: tiff2png.sh
+
+Contents:
+
+**********
+#!/bin/bash
+# Author: Yijia
+# Script: tiff2png.sh
+# Desc: Converts all .tif images to .png
+# Date: Oct 2025
+
+for f in *.tif; do
+    echo "Converting $f"
+    convert "$f" "$(basename "$f" .tif).png"
+done
+
+**********
+
+Output (first 500 chars):
+
+**********
+Converting *.tif
+
+**********
+Errors:
+**********
+convert-im6.q16: unable to open image `*.tif': No such file or directory @ error/blob.c/OpenBlob/2964.
+convert-im6.q16: no images defined `*.png' @ error/convert.c/ConvertImageCommand/3234.
+
+**********
+======================================================================
+Script: boilerplate.sh
+
+Contents:
+
+**********
+#!/bin/sh
+# Author: yijia.yao25.@imperial.ac.uk
+# Script: boilerplate.sh
+# Desc: simple boilerplate for shell scripts
+# Arguments: none
+# Date: Oct 2025
+
+
+echo -e "\nThis is a shell script! \n"
+
+
+#exit
+
+
+
+
+**********
+
+Output (first 500 chars):
+
+**********
+
+This is a shell script! 
+
+
+**********
+No errors.
+======================================================================
+Script: ConcatenateTwoFiles.sh
+
+Contents:
+
+**********
+#!/bin/bash
+# Author: Yijia
+# Script: ConcatenateTwoFiles.sh
+# Desc: Concatenates two files into a third
+# Arguments: file1 file2 output_file
+# Date: Oct 2025
+
+if [ $# -ne 3 ]; then
+    echo "Usage: bash ConcatenateTwoFiles.sh <file1> <file2> <output>"
+    exit 1
+fi
+
+cat "$1" > "$3"
+cat "$2" >> "$3"
+echo "Merged file saved as $3"
+
+**********
+
+Output (first 500 chars):
+
+**********
+Usage: bash ConcatenateTwoFiles.sh <file1> <file2> <output>
+
+**********
+No errors.
+======================================================================
+Script: tabtocsv.sh
+
+Contents:
+
+**********
+#!/bin/sh
+# Author: Yijia
+# Script: tabtocsv.sh
+# Desc: Substitute tabs with commas
+# Arguments: 1 -> tab-delimited file
+# Date: Oct 2025
+
+if [ $# -ne 1 ]; then
+    echo "Error: Please provide ONE input file."
+    echo "Usage: bash tabtocsv.sh <file>"
+    exit 1
+fi
+
+infile=$1
+outfile="${infile%.txt}.csv"
+
+echo "Creating a comma-delimited version of $infile ..."
+cat "$infile" | tr -s "\t" "," > "$outfile"
+echo "Done! Saved as $outfile"
+exit 0
+
+**********
+
+Output (first 500 chars):
+
+**********
+Error: Please provide ONE input file.
+Usage: bash tabtocsv.sh <file>
+
+**********
+No errors.
+======================================================================
+Script: MyExampleScript.sh
+
+Contents:
+
+**********
+#!/bin/sh
+# Author: Yijia
+# Script: MyExampleScript.sh
+# Desc: Prints a hello message
+# Date: Oct 2025
+
+MSG1="Hello"
+MSG2=$USER
+echo "$MSG1 $MSG2"
+echo "Hello $USER"
+
+**********
+
+Output (first 500 chars):
+
+**********
+Hello mhasoba
+Hello mhasoba
+
+**********
+No errors.
+======================================================================
+Script: variables.sh
+
+Contents:
+
+**********
+#!/bin/sh
+# Author: Yijia
+# Script: variables.sh
+# Desc: Demonstrates shell variables
+# Date: Oct 2025
+
+echo "This script was called with $# parameters"
+echo "The script's name is $0"
+echo "The arguments are $@"
+echo "The first argument is $1"
+echo "The second argument is $2"
+
+MY_VAR='some string'
+echo "The current value of MY_VAR is: $MY_VAR"
+echo "Please enter a new string:"
+read MY_VAR
+echo "The new value of MY_VAR is: $MY_VAR"
+
+echo "Enter two numbers separated by a space:"
+read a b
+MY_SUM=$(expr $a + $b)
+echo "You entered $a and $b; their sum is $MY_SUM"
+
+**********
+
+Output (first 500 chars):
+
+**********
+This script was called with 0 parameters
+The script's name is variables.sh
+The arguments are 
+The first argument is 
+The second argument is 
+The current value of MY_VAR is: some string
+Please enter a new string:
+The new value of MY_VAR is: 
+Enter two numbers separated by a space:
+You entered  and ; their sum is 
+
+**********
+Errors:
+**********
+expr: syntax error: missing argument after ‘+’
+
+**********
+======================================================================
+Script: CountLines.sh
+
+Contents:
+
+**********
+#!/bin/bash
+# Author: Yijia
+# Script: CountLines.sh
+# Desc: Counts the number of lines in a file
+# Date: Oct 2025
+
+if [ $# -ne 1 ]; then
+    echo "Usage: bash CountLines.sh <file>"
+    exit 1
+fi
+
+NumLines=$(wc -l < "$1")
+echo "The file $1 has $NumLines lines."
+
+**********
+
+Output (first 500 chars):
+
+**********
+Usage: bash CountLines.sh <file>
+
+**********
+No errors.
+
+======================================================================
+FEEDBACK SUMMARY
+======================================================================
+
+Scripts tested: 17
+Scripts successful: 15
+Scripts with errors: 2
+Warnings/Notes: 1
+
+IMPORTANT DEBUGGING GUIDANCE:
+------------------------------
+
+Please review all warnings and errors, and your directory structure based on the above log.
+
+Ask yourself: Why did I not get these warnings or errors on my machine when I tested my code?
+Common reasons for environment differences:
+
+• File paths: Your local machine may have different directory structures
+• Dependencies: Missing packages or different versions
+• File permissions: Scripts may not be executable on the testing server
+• Case sensitivity: Linux systems are case-sensitive (your laptop may not be)
+• Working directory: Scripts may assume they run from a specific location
+• Input files: Required data files may be missing or in wrong locations
+
+Debugging steps:
+1. Test your code in a clean environment (fresh directory)
+2. Check all file paths are relative and correct
+3. Verify all required files are present and properly named
+4. Test on a case-sensitive system if possible
+5. Run your scripts from different directories to check robustness
+
+Fix these issues and test again. Good debugging skills are essential for scientific computing!
+
