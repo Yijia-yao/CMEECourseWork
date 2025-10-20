@@ -1,0 +1,1184 @@
+======================================================================
+AUTOMATED FEEDBACK LOG
+======================================================================
+
+HOW TO READ THIS FEEDBACK:
+--------------------------
+1. This log contains detailed feedback on your code execution
+2. Each script is tested and results are shown with output and errors
+3. IMPORTANT: Read all the way to the END for a summary and debugging guidance
+4. The summary at the end will help you understand and fix any issues
+5. Scripts are run in a headless environment (no GUI applications)
+
+======================================================================
+
+Starting testing for Yijia Yao
+
+Processing week 2
+
+Your current Git repo size is about 1.41 MiB on disk
+
+Found directories: .git, week1, week2, Feedback
+Found files: .gitignore, README.md
+
+Processing week 2: week2
+
+Found 8 code files to test.
+
+Note: Expected file checking not performed (no FileList provided).
+Expected file checking will only be performed during final assessment.
+
+======================================================================
+Script: lc2.py
+
+Contents:
+
+**********
+# Average UK Rainfall (mm) for 1910 by month
+# http://www.metoffice.gov.uk/climate/uk/datasets
+rainfall = (('JAN',111.4),
+            ('FEB',126.1),
+            ('MAR', 49.9),
+            ('APR', 95.3),
+            ('MAY', 71.8),
+            ('JUN', 70.2),
+            ('JUL', 97.1),
+            ('AUG',140.2),
+            ('SEP', 27.0),
+            ('OCT', 89.4),
+            ('NOV',128.4),
+            ('DEC',142.2),
+           )
+
+# (1) Use a list comprehension to create a list of month,rainfall tuples where
+# the amount of rain was greater than 100 mm.
+
+high_rain = [(month, rain) for month, rain in rainfall if rain > 100]
+print("Step #1:")
+print("Months and rainfall values when the amount of rain was greater than 100 mm:")
+print(high_rain)
+print("\n")
+
+# (2) Use a list comprehension to create a list of just month names where the
+# amount of rain was less than 50 mm. 
+
+low_rain_months = [month for month, rain in rainfall if rain < 50]
+print("Step #2:")
+print("Months with rainfall less than 50 mm:")
+print(low_rain_months)
+print("\n")
+
+# (3) Now do (1) and (2) using conventional loops (you can choose to do 
+# this before 1 and 2 !). 
+
+high_rain_loop = []
+for month, rain in rainfall:
+    if rain > 100:
+        high_rain_loop.append((month, rain))
+
+# Rainfall < 50 mm
+low_rain_months_loop = []
+for month, rain in rainfall:
+    if rain < 50:
+        low_rain_months_loop.append(month)
+
+print("Step #3:")
+print("Using conventional loops:")
+print("Months and rainfall values > 100 mm:")
+print(high_rain_loop)
+print("Months with rainfall < 50 mm:")
+print(low_rain_months_loop)
+
+# A good example output is:
+#
+# Step #1:
+# Months and rainfall values when the amount of rain was greater than 100mm:
+# [('JAN', 111.4), ('FEB', 126.1), ('AUG', 140.2), ('NOV', 128.4), ('DEC', 142.2)]
+# ... etc.
+
+
+**********
+
+Output (first 500 chars):
+
+**********
+Step #1:
+Months and rainfall values when the amount of rain was greater than 100 mm:
+[('JAN', 111.4), ('FEB', 126.1), ('AUG', 140.2), ('NOV', 128.4), ('DEC', 142.2)]
+
+
+Step #2:
+Months with rainfall less than 50 mm:
+['MAR', 'SEP']
+
+
+Step #3:
+Using conventional loops:
+Months and rainfall values > 100 mm:
+[('JAN', 111.4), ('FEB', 126.1), ('AUG', 140.2), ('NOV', 128.4), ('DEC', 142.2)]
+Months with rainfall < 50 mm:
+['MAR', 'SEP']
+
+**********
+No errors.
+======================================================================
+Script: dictionary.py
+
+Contents:
+
+**********
+taxa = [ ('Myotis lucifugus','Chiroptera'),
+         ('Gerbillus henleyi','Rodentia',),
+         ('Peromyscus crinitus', 'Rodentia'),
+         ('Mus domesticus', 'Rodentia'),
+         ('Cleithrionomys rutilus', 'Rodentia'),
+         ('Microgale dobsoni', 'Afrosoricida'),
+         ('Microgale talazaci', 'Afrosoricida'),
+         ('Lyacon pictus', 'Carnivora'),
+         ('Arctocephalus gazella', 'Carnivora'),
+         ('Canis lupus', 'Carnivora'),
+        ]
+
+# Write a python script to populate a dictionary called taxa_dic derived from
+# taxa so that it maps order names to sets of taxa and prints it to screen.
+# 
+# An example output is:
+# 
+# 'Chiroptera' : set(['Myotis lucifugus']) ... etc. 
+# OR, 
+# 'Chiroptera': {'Myotis  lucifugus'} ... etc
+
+#### Your solution here #### 
+
+taxa_dic = {}
+
+for species, order in taxa:
+    if order not in taxa_dic:
+        taxa_dic[order] = set()
+    taxa_dic[order].add(species)
+
+for order, species_set in taxa_dic.items():
+    print(f"'{order}': {species_set}")
+
+# Now write a list comprehension that does the same (including the printing after the dictionary has been created)  
+ 
+#### Your solution here #### 
+
+taxa_dic_comp = {order: {species for species, o in taxa if o == order} for _, order in taxa}
+
+for order, species_set in taxa_dic_comp.items():
+    print(f"'{order}': {species_set}")
+
+**********
+
+Output (first 500 chars):
+
+**********
+'Chiroptera': {'Myotis lucifugus'}
+'Rodentia': {'Peromyscus crinitus', 'Mus domesticus', 'Gerbillus henleyi', 'Cleithrionomys rutilus'}
+'Afrosoricida': {'Microgale talazaci', 'Microgale dobsoni'}
+'Carnivora': {'Arctocephalus gazella', 'Canis lupus', 'Lyacon pictus'}
+'Chiroptera': {'Myotis lucifugus'}
+'Rodentia': {'Peromyscus crinitus', 'Mus domesticus', 'Gerbillus henleyi', 'Cleithrionomys rutilus'}
+'Afrosoricida': {'Microgale talazaci', 'Microgale dobsoni'}
+'Carnivora': {'Arctocephalus gazella'
+**********
+No errors.
+======================================================================
+Script: cfexercises1.py
+
+Contents:
+
+**********
+
+import sys
+
+def foo_1(x):
+    """Return the square root of x."""
+    return x ** 0.5
+
+def foo_2(x, y):
+    """Return the larger of x and y."""
+    if x > y:
+        return x
+    else:
+        return y
+
+def foo_3(x, y, z):
+    """Return x, y, z in ascending order."""
+    return sorted([x, y, z])
+
+def foo_4(x):
+    """Return factorial of x (x!)."""
+    result = 1
+    for i in range(1, x + 1):
+        result *= i
+    return result
+
+def foo_5(x):
+    """Return a list of Fibonacci numbers up to x."""
+    fibs = [0, 1]
+    for i in range(2, x):
+        fibs.append(fibs[-1] + fibs[-2])
+    return fibs[:x]
+
+def main(argv):
+    """Main entry point."""
+    print("foo_1(9) =", foo_1(9))
+    print("foo_2(10, 20) =", foo_2(10, 20))
+    print("foo_3(10, 5, 7) =", foo_3(10, 5, 7))
+    print("foo_4(5) =", foo_4(5))
+    print("foo_5(10) =", foo_5(10))
+    return 0
+
+if __name__ == "__main__":
+    status = main(sys.argv)
+    sys.exit(status)
+
+**********
+
+Output (first 500 chars):
+
+**********
+foo_1(9) = 3.0
+foo_2(10, 20) = 20
+foo_3(10, 5, 7) = [5, 7, 10]
+foo_4(5) = 120
+foo_5(10) = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
+
+**********
+No errors.
+======================================================================
+Script: Python pracitce for 1class.py
+
+Contents:
+
+**********
+# Python practice for 1class.py
+# Author: Yijia.YAO
+# Description: Basic Python exercises for 1class practice
+
+
+# =========================================
+# Getting Started with Python
+# =========================================
+
+# --- Basic Math Operations ---
+print(2 + 2)    # Summation
+print(2 * 2)    # Multiplication
+print(2 / 2)    # Division
+print(2 // 2)   # Integer division
+print(2 > 3)    # Logical comparison
+print(2 >= 2)   # Logical comparison
+
+# --- Zen of Python ---
+import this
+
+# =========================================
+# Variable Types
+# =========================================
+
+a = 2
+print(type(a))
+
+a = 2.0
+print(type(a))
+
+a = "Two"
+print(type(a))
+
+a = True
+print(type(a))
+
+# =========================================
+# Operators
+# =========================================
+
+print(2 == 2)
+print(2 != 2)
+print(3 / 2)
+print(3 // 2)
+
+x = 5
+y = 2
+print(x + y)
+
+x = 'My string'
+print(x + ' now has more stuff')
+
+# Type conversion
+z = '88'
+print(x + z)
+print(y + int(z))
+
+# =========================================
+# Lists
+# =========================================
+
+MyList = [3, 2.44, 'green', True]
+print(MyList[1])
+print(MyList[0])
+
+# Mutating list
+MyList[2] = 'blue'
+print(MyList)
+
+MyList.append('a new item')
+print(MyList)
+
+del MyList[2]
+print(MyList)
+
+# =========================================
+# Tuples
+# =========================================
+
+MyTuple = ("a", "b", "c")
+print(MyTuple)
+print(type(MyTuple))
+print(MyTuple[0])
+print(len(MyTuple))
+
+FoodWeb = [('a','b'),('a','c'),('b','c'),('c','c')]
+print(FoodWeb)
+print(FoodWeb[0])
+print(FoodWeb[0][0])
+
+# Immutable example
+# FoodWeb[0][0] = "bbb"  # Will cause TypeError
+
+FoodWeb[0] = ("bbb","ccc")
+print(FoodWeb)
+
+# =========================================
+# Sets
+# =========================================
+
+a = [5,6,7,7,7,8,9,9]
+b = set(a)
+print(b)
+
+c = set([3,4,5,6])
+print(b & c)  # Intersection
+print(b | c)  # Union
+
+# =========================================
+# Dictionaries
+# =========================================
+
+GenomeSize = {
+    'Homo sapiens': 3200.0,
+    'Escherichia coli': 4.6,
+    'Arabidopsis thaliana': 157.0
+}
+print(GenomeSize)
+
+print(GenomeSize['Arabidopsis thaliana'])
+
+GenomeSize['Saccharomyces cerevisiae'] = 12.1
+print(GenomeSize)
+
+GenomeSize['Homo sapiens'] = 3201.1
+print(GenomeSize)
+
+# Duplicate key example
+my_dict = {'a': 1, 'b': 2, 'a': 3}
+print(my_dict)
+
+# =========================================
+# Copying Mutable Objects
+# =========================================
+
+# Reference copy
+a = [1, 2, 3]
+b = a
+a.append(4)
+print(a)
+print(b)
+
+# Shallow copy
+a = [1, 2, 3]
+b = a[:]
+a.append(4)
+print(a)
+print(b)
+
+# Deep copy
+import copy
+a = [[1, 2], [3, 4]]
+b = copy.deepcopy(a)
+a[0][1] = 22
+print(a)
+print(b)
+
+# =========================================
+# Strings
+# =========================================
+
+s = " this is a string "
+print(len(s))
+print(s.replace(" ","-"))
+print(s.find("s"))
+print(s.count("s"))
+print(s.split())
+print(s.split(" is "))
+print(s.strip())
+print(s.upper())
+print(s.upper().strip())
+print('WORD'.lower())
+
+# Getting help (use in interactive mode)
+# ?s.upper
+# help(s.upper)
+
+
+
+# ==========================
+# loops
+# ==========================
+# Demonstrates basic for and while loops in Python
+
+# FOR loop example 1
+for i in range(5):
+    print(i)
+
+# FOR loop example 2
+my_list = [0, 2, "geronimo!", 3.0, True, False]
+for k in my_list:
+    print(k)
+
+# FOR loop example 3
+total = 0
+summands = [0, 1, 11, 111, 1111]
+for s in summands:
+    total = total + s
+    print(total)
+
+# WHILE loop example
+z = 0
+while z < 100:
+    z = z + 1
+    print(z)
+
+
+
+# ==========================
+# cfexercises1
+# ==========================
+# Functions demonstrating conditionals (if statements)
+
+def foo_1(x):
+    """Return the square root of x."""
+    return x ** 0.5
+
+
+def foo_2(x, y):
+    """Return the larger of x and y."""
+    if x > y:
+        return x
+    return y
+
+
+def foo_3(x, y, z):
+    """Return the three inputs sorted in ascending order."""
+    if x > y:
+        x, y = y, x
+    if x > z:
+        x, z = z, x
+    if y > z:
+        y, z = z, y
+    return [x, y, z]
+
+
+def foo_4(x):
+    """Return factorial of x using a for loop."""
+    result = 1
+    for i in range(1, x + 1):
+        result = result * i
+    return result
+
+
+def foo_5(x):
+    """Recursive factorial function."""
+    if x == 1:
+        return 1
+    return x * foo_5(x - 1)
+
+
+def foo_6(x):
+    """Factorial using a while loop."""
+    facto = 1
+    while x >= 1:
+        facto = facto * x
+        x = x - 1
+    return facto
+
+
+# Run a few examples
+print(foo_1(9))
+print(foo_2(3, 9))
+print(foo_3(8, 2, 6))
+print(foo_4(5))
+print(foo_5(5))
+print(foo_6(5))
+
+
+
+# ==========================
+# cfexercises2
+# ==========================
+# Functions combining loops and conditionals
+
+def hello_1(x):
+    for j in range(x):
+        if j % 3 == 0:
+            print('hello')
+    print(' ')
+
+
+def hello_2(x):
+    for j in range(x):
+        if j % 5 == 3:
+            print('hello')
+        elif j % 4 == 3:
+            print('hello')
+    print(' ')
+
+
+def hello_3(x, y):
+    for i in range(x, y):
+        print('hello')
+    print(' ')
+
+
+def hello_4(x):
+    while x != 15:
+        print('hello')
+        x = x + 3
+    print(' ')
+
+
+def hello_5(x):
+    while x < 100:
+        if x == 31:
+            for k in range(7):
+                print('hello')
+        elif x == 18:
+            print('hello')
+        x = x + 1
+    print(' ')
+
+
+def hello_6(x, y):
+    """Example of while loop with break."""
+    while x:  # while x is True
+        print("hello! " + str(y))
+        y += 1
+        if y == 6:
+            break
+    print(' ')
+
+
+# Run tests
+hello_1(12)
+hello_2(12)
+hello_3(3, 17)
+hello_4(0)
+hello_5(12)
+hello_6(True, 0)
+
+
+
+# ==========================
+# oaks
+# ==========================
+# Finds oak species names using loops and comprehensions
+
+taxa = [
+    'Quercus robur',
+    'Fraxinus excelsior',
+    'Pinus sylvestris',
+    'Quercus cerris',
+    'Quercus petraea',
+]
+
+def is_an_oak(name):
+    """Return True if the species name starts with 'Quercus'."""
+    return name.lower().startswith('quercus ')
+
+# Using for loop
+oaks_loops = set()
+for species in taxa:
+    if is_an_oak(species):
+        oaks_loops.add(species)
+print("Oaks using for loop:", oaks_loops)
+
+# Using list comprehension
+oaks_lc = set([species for species in taxa if is_an_oak(species)])
+print("Oaks using list comprehension:", oaks_lc)
+
+# Uppercase names (for loop)
+oaks_loops_upper = set()
+for species in taxa:
+    if is_an_oak(species):
+        oaks_loops_upper.add(species.upper())
+print("Oaks upper (for loop):", oaks_loops_upper)
+
+# Uppercase names (list comprehension)
+oaks_lc_upper = set([species.upper() for species in taxa if is_an_oak(species)])
+print("Oaks upper (list comprehension):", oaks_lc_upper)
+
+
+# ==========================
+# scope
+# ==========================
+# Demonstration of variable scope, global variables, and the importance of return
+# This script combines all examples discussed.
+
+# ----------------------------------------
+# Example 1: Variables in loops (global scope)
+# ----------------------------------------
+print("\n--- Example 1: Loop variables ---")
+i = 1
+x = 0
+for i in range(10):
+    x += 1
+print(i)  # 9
+print(x)  # 10
+
+
+# ----------------------------------------
+# Example 2: Variables inside a function (local scope)
+# ----------------------------------------
+print("\n--- Example 2: Local variables in functions ---")
+i = 1
+x = 0
+
+def a_function(y):
+    x = 0  # local variable
+    for i in range(y):
+        x += 1
+    return x
+
+print(a_function(10))  # returns 10
+print(i)  # still 1
+print(x)  # still 0
+
+# Explicitly replace x
+x = a_function(10)
+print("New x after catching return value:", x)
+
+
+# ----------------------------------------
+# Example 3: Global variables
+# ----------------------------------------
+print("\n--- Example 3: Global variables ---")
+_a_global = 10  # a global variable
+
+if _a_global >= 5:
+    _b_global = _a_global + 5  # also global
+
+print("Before calling a_function, outside:", _a_global, _b_global)
+
+def a_function():
+    _a_global = 4  # local variable
+    if _a_global >= 4:
+        _b_global = _a_global + 5  # local variable
+    _a_local = 3
+
+    print("Inside the function, _a_global =", _a_global)
+    print("Inside the function, _b_global =", _b_global)
+    print("Inside the function, _a_local =", _a_local)
+
+a_function()
+
+print("After calling a_function, outside (still):", _a_global, _b_global)
+try:
+    print(_a_local)
+except NameError:
+    print("Error: _a_local is not defined outside the function (NameError)")
+
+
+# ----------------------------------------
+# Example 4: Global variable accessible inside functions
+# ----------------------------------------
+print("\n--- Example 4: Using global variable inside a function ---")
+_a_global = 10
+
+def a_function():
+    _a_local = 4
+    print("Inside the function, _a_local =", _a_local)
+    print("Inside the function, _a_global =", _a_global)
+
+a_function()
+print("Outside the function, _a_global =", _a_global)
+
+
+# ----------------------------------------
+# Example 5: Using 'global' keyword
+# ----------------------------------------
+print("\n--- Example 5: Modifying global variable with 'global' keyword ---")
+_a_global = 10
+print("Before calling a_function, _a_global =", _a_global)
+
+def a_function():
+    global _a_global
+    _a_global = 5  # modifies global variable
+    _a_local = 4
+    print("Inside the function, _a_global =", _a_global)
+    print("Inside the function, _a_local =", _a_local)
+
+a_function()
+print("After calling a_function, _a_global =", _a_global)
+
+
+# ----------------------------------------
+# Example 6: global in nested function (case 1)
+# ----------------------------------------
+print("\n--- Example 6a: Nested function using global keyword ---")
+def a_function():
+    _a_global = 10
+
+    def _a_function2():
+        global _a_global
+        _a_global = 20
+
+    print("Before calling _a_function2, _a_global =", _a_global)
+    _a_function2()
+    print("After calling _a_function2, _a_global =", _a_global)
+
+a_function()
+print("In main workspace, _a_global =", _a_global)
+
+
+# ----------------------------------------
+# Example 7: global in nested function (case 2)
+# ----------------------------------------
+print("\n--- Example 6b: Nested function with pre-defined _a_global ---")
+_a_global = 10
+
+def a_function():
+
+    def _a_function2():
+        global _a_global
+        _a_global = 20
+
+    print("Before calling _a_function2, _a_global =", _a_global)
+    _a_function2()
+    print("After calling _a_function2, _a_global =", _a_global)
+
+a_function()
+print("In main workspace, _a_global =", _a_global)
+
+
+# ----------------------------------------
+# Example 8: Return statement importance
+# ----------------------------------------
+print("\n--- Example 7: Importance of return directive ---")
+
+def modify_list_1(some_list):
+    print('got', some_list)
+    some_list = [1, 2, 3, 4]
+    print('set to', some_list)
+
+my_list = [1, 2, 3]
+print('before, my_list =', my_list)
+modify_list_1(my_list)
+print('after, my_list =', my_list)  # unchanged
+
+print("\nNow using return...")
+
+def modify_list_2(some_list):
+    print('got', some_list)
+    some_list = [1, 2, 3, 4]
+    print('set to', some_list)
+    return some_list
+
+my_list = [1, 2, 3]
+my_list = modify_list_2(my_list)
+print('after, my_list =', my_list)
+
+print("\nNow modifying the original list in place...")
+
+def modify_list_3(some_list):
+    print('got', some_list)
+    some_list.append(4)  # modifies original list object
+    print('changed to', some_list)
+
+my_list = [1, 2, 3]
+print('before, my_list =', my_list)
+modify_list_3(my_list)
+print('after, my_list =', my_list)
+
+
+ 
+
+
+
+
+
+**********
+
+Output (first 500 chars):
+
+**********
+
+**********
+Errors:
+**********
+python3: can't open file '/home/mhasoba/Documents/Teaching/IC_CMEE/2025-26/Coursework/StudentRepos/YijiaYao_yy3324/week2/code/Python': [Errno 2] No such file or directory
+
+**********
+======================================================================
+Script: lc1.py
+
+Contents:
+
+**********
+birds = ( ('Passerculus sandwichensis','Savannah sparrow',18.7),
+          ('Delichon urbica','House martin',19),
+          ('Junco phaeonotus','Yellow-eyed junco',19.5),
+          ('Junco hyemalis','Dark-eyed junco',19.6),
+          ('Tachycineata bicolor','Tree swallow',20.2),
+         )
+
+#(1) Write three separate list comprehensions that create three different
+# lists containing the latin names, common names and mean body masses for
+# each species in birds, respectively. 
+latin_names = [bird[0] for bird in birds]
+common_names = [bird[1] for bird in birds]
+mean_body_masses = [bird[2] for bird in birds]
+
+print("Step #1 (List Comprehensions):")
+print("Latin names:")
+print(latin_names)
+print("Common names:")
+print(common_names)
+print("Mean body masses:")
+print(mean_body_masses)
+print("\n")
+
+# (2) Now do the same using conventional loops (you can choose to do this 
+# before 1 !). 
+
+latin_names_loop = []
+common_names_loop = []
+mean_body_masses_loop = []
+
+for bird in birds:
+    latin_names_loop.append(bird[0])
+    common_names_loop.append(bird[1])
+    mean_body_masses_loop.append(bird[2])
+
+print("Step #2 (Conventional Loops):")
+print("Latin names:")
+print(latin_names_loop)
+print("Common names:")
+print(common_names_loop)
+print("Mean body masses:")
+print(mean_body_masses_loop)
+
+
+# A nice example out out is:
+# Step #1:
+# Latin names:
+# ['Passerculus sandwichensis', 'Delichon urbica', 'Junco phaeonotus', 'Junco hyemalis', 'Tachycineata bicolor']
+# ... etc.
+ 
+**********
+
+Output (first 500 chars):
+
+**********
+Step #1 (List Comprehensions):
+Latin names:
+['Passerculus sandwichensis', 'Delichon urbica', 'Junco phaeonotus', 'Junco hyemalis', 'Tachycineata bicolor']
+Common names:
+['Savannah sparrow', 'House martin', 'Yellow-eyed junco', 'Dark-eyed junco', 'Tree swallow']
+Mean body masses:
+[18.7, 19, 19.5, 19.6, 20.2]
+
+
+Step #2 (Conventional Loops):
+Latin names:
+['Passerculus sandwichensis', 'Delichon urbica', 'Junco phaeonotus', 'Junco hyemalis', 'Tachycineata bicolor']
+Common names:
+['Savannah sparrow', 
+**********
+No errors.
+======================================================================
+Script: oaks_debugme.py
+
+Contents:
+
+**********
+import csv
+import sys
+
+#Define function
+#def is_an_oak(name):
+#  """ Returns True if name is starts with 'quercus' """
+#return name.lower().startswith('quercs')
+
+###Spelling mistake: 'quercs' is missing a u
+
+def is_an_oak(name):
+    """Returns True if name starts with 'quercus'"""
+    return name.lower().startswith('quercus')
+
+
+
+#def main(argv): 
+    #f = open('../data/TestOaksData.csv','r')
+    #g = open('../data/JustOaksData.csv','w')
+    #taxa = csv.reader(f)
+    #csvwrite = csv.writer(g)
+    #oaks = set()
+    #for row in taxa:
+        #print(row)
+        #print ("The genus is: ") 
+        #print(row[0] + '\n')
+        #if is_an_oak(row[0]):
+            #print('FOUND AN OAK!\n')
+            #csvwrite.writerow([row[0], row[1]])    
+
+    #return 0
+    
+#if (__name__ == "__main__"):
+    #status = main(sys.argv)
+
+###If you input "Quercuss" (with an extra "s") or "Quercus robur" (with a space), the original function will wrongly return False. So we need to: automatically remove Spaces; Ignore case; Minor spelling mistakes (such as Quercuss) are allowed
+
+def main(argv): 
+    """Reads a CSV file, writes a new one with only oaks."""
+    with open('../data/TestOaksData.csv','r') as f, open('../results/JustOaksData.csv','w', newline='') as g:
+        taxa = csv.reader(f)
+        csvwrite = csv.writer(g)
+        for row in taxa:
+            print(row)
+            print("The genus is:", row[0])
+            if is_an_oak(row[0]):
+                print('FOUND AN OAK!\n')
+                csvwrite.writerow([row[0], row[1]])
+    return 0
+
+if __name__ == "__main__":
+    status = main(sys.argv)
+    sys.exit(status)
+**********
+
+Output (first 500 chars):
+
+**********
+['Genus', ' species']
+The genus is: Genus
+['Quercus', ' robur']
+The genus is: Quercus
+FOUND AN OAK!
+
+['Fraxinus', ' excelsior']
+The genus is: Fraxinus
+['Pinus', ' sylvestris']
+The genus is: Pinus
+['Quercus', ' cerris']
+The genus is: Quercus
+FOUND AN OAK!
+
+['Quercus', ' petraea']
+The genus is: Quercus
+FOUND AN OAK!
+
+
+**********
+No errors.
+======================================================================
+Script: tuple.py
+
+Contents:
+
+**********
+birds = ( ('Passerculus sandwichensis','Savannah sparrow',18.7),
+          ('Delichon urbica','House martin',19),
+          ('Junco phaeonotus','Yellow-eyed junco',19.5),
+          ('Junco hyemalis','Dark-eyed junco',19.6),
+          ('Tachycineata bicolor','Tree swallow',20.2),
+        )
+
+# Birds is a tuple of tuples of length three: latin name, common name, mass.
+# write a (short) script to print these on a separate line or output block by
+# species 
+# 
+# A nice example output is:
+# 
+# Latin name: Passerculus sandwichensis Common name: Savannah sparrow Mass: 18.7
+# ... etc.
+
+# ---------- Method 1: Single-line printing ----------
+print("Step 1: Single-line output\n")
+for latin, common, mass in birds:
+    print(f"Latin name: {latin} | Common name: {common} | Mass: {mass}")
+
+# ---------- Method 2: Print in separate lines ----------
+print("\nStep 2: Multi-line formatted output\n")
+for latin, common, mass in birds:
+    print(f"Latin name: {latin}")
+    print(f"Common name: {common}")
+    print(f"Mass: {mass}\n")
+**********
+
+Output (first 500 chars):
+
+**********
+Step 1: Single-line output
+
+Latin name: Passerculus sandwichensis | Common name: Savannah sparrow | Mass: 18.7
+Latin name: Delichon urbica | Common name: House martin | Mass: 19
+Latin name: Junco phaeonotus | Common name: Yellow-eyed junco | Mass: 19.5
+Latin name: Junco hyemalis | Common name: Dark-eyed junco | Mass: 19.6
+Latin name: Tachycineata bicolor | Common name: Tree swallow | Mass: 20.2
+
+Step 2: Multi-line formatted output
+
+Latin name: Passerculus sandwichensis
+Common name: Savannah spar
+**********
+No errors.
+======================================================================
+Script: align_seqs.py
+
+Contents:
+
+**********
+# Two example sequences to match
+seq2 = "ATCGCCGGATTACGGG"
+seq1 = "CAATTCGGAT"
+
+
+import csv
+import sys
+import os
+
+
+input_path = "../data/DNA_seqs.csv"
+output_path = "../results/best_alignment.txt"
+
+
+def read_sequences(filepath):
+    """Read two DNA sequences from a CSV file."""
+    with open(filepath, "r") as f:
+        reader = csv.reader(f)
+        seqs = []
+        for row in reader:
+            # Ignore empty lines or headers
+            if len(row) > 0:
+                seqs.append(row[1].strip())
+        if len(seqs) < 2:
+            raise ValueError("Input file must contain at least two sequences!")
+    return seqs[0], seqs[1]
+
+
+def calculate_score(s1, s2, l1, l2, startpoint):
+    """Compute alignment score starting from a given offset."""
+    score = 0
+    for i in range(l2):
+        if (i + startpoint) < l1:
+            if s1[i + startpoint] == s2[i]:
+
+                score += 1
+    return score
+
+
+def find_best_alignment(seq1, seq2):
+    """Return the best alignment and its score."""
+    l1, l2 = len(seq1), len(seq2)
+    # Ensure s1 is the longer sequence
+    if l1 >= l2:
+        s1, s2 = seq1, seq2
+    else:
+        s1, s2 = seq2, seq1
+        l1, l2 = l2, l1
+
+    best_align = None
+    best_score = -1
+
+    for i in range(l1):
+        z = calculate_score(s1, s2, l1, l2, i)
+        if z > best_score:
+            best_align = "." * i + s2
+            best_score = z
+    return best_align, s1, best_score
+
+
+def main(argv):
+    """Main function."""
+    print("Reading input sequences...")
+    seq1, seq2 = read_sequences(input_path)
+
+    print("Calculating best alignment...")
+    best_align, s1, best_score = find_best_alignment(seq1, seq2)
+
+    # Ensure results directory exists
+    os.makedirs(os.path.dirname(output_path), exist_ok=True)
+
+    print("Saving results...")
+    with open(output_path, "w") as out:
+        out.write("Best alignment:\n")
+        out.write(best_align + "\n")
+        out.write(s1 + "\n")
+        out.write(f"\nBest score: {best_score}\n")
+
+    print(f"Results saved to: {output_path}")
+    print(f"Best score = {best_score}")
+    return 0
+
+
+if __name__ == "__main__":
+    status = main(sys.argv)
+    sys.exit(status)
+**********
+
+Output (first 500 chars):
+
+**********
+Reading input sequences...
+Calculating best alignment...
+Saving results...
+Results saved to: ../results/best_alignment.txt
+Best score = 5
+
+**********
+No errors.
+
+======================================================================
+FEEDBACK SUMMARY
+======================================================================
+
+Scripts tested: 8
+Scripts successful: 7
+Scripts with errors: 1
+Warnings/Notes: 1
+
+IMPORTANT DEBUGGING GUIDANCE:
+------------------------------
+
+Please review all warnings and errors, and your directory structure based on the above log.
+
+Ask yourself: Why did I not get these warnings or errors on my machine when I tested my code?
+Common reasons for environment differences:
+
+• File paths: Your local machine may have different directory structures
+• Dependencies: Missing packages or different versions
+• File permissions: Scripts may not be executable on the testing server
+• Case sensitivity: Linux systems are case-sensitive (your laptop may not be)
+• Working directory: Scripts may assume they run from a specific location
+• Input files: Required data files may be missing or in wrong locations
+
+Debugging steps:
+1. Test your code in a clean environment (fresh directory)
+2. Check all file paths are relative and correct
+3. Verify all required files are present and properly named
+4. Test on a case-sensitive system if possible
+5. Run your scripts from different directories to check robustness
+
+Fix these issues and test again. Good debugging skills are essential for scientific computing!
+
