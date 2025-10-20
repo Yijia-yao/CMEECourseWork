@@ -10,9 +10,9 @@ This repo is a collection of all the coding exercises, data analyses, and modell
 It’s basically a record of my journey learning how to think like a computational biologist — from writing Bash scripts and analysing data in R, to building models in Python.  
 Each week focuses on a different skill, and together they cover everything from UNIX basics to ecological modelling and statistics.
 
-Feel free to explore the structure below 👇
----
-##  Learning Goals
+## Feel free to explore the structure below 👇
+
+#  Week1 Learning Goals
 - Learning **UNIX**, **R**, and **Python**  
 - Writing reproducible, modular, and well-organized code  
 - Applying computational methods to biological datasets  
@@ -106,3 +106,59 @@ Each weekly folder is organized as follows:
 ├── TMQB Coursework Assessment
 
 └── Introduction to High-Performance Computing (HPC)
+
+---
+
+#  Week2 Learning Goals
+
+This section summarises how the **Python-related** parts of my CMEECourseWork repo are organised.  
+Each week builds up from basic scripting and logic to debugging, testing, and handling biological data.
+
+---
+
+### Introduction to Python
+
+├── `basic_io1.py` — Reading and writing files  
+├── `boilerplate.py` — Basic script structure and `main()` usage  
+├── `cfexercises1.py` — Control flow exercises (pre-modular version)  
+├── `control_flow.py` — Example module with functions  
+├── `debugme.py` — Simple script for debugging practice  
+├── `scope.py` — Understanding variable scope and namespaces  
+├── `sysargv.py` — Command-line arguments and system inputs  
+├── `loops.py` — Practice with `for` and `while` loops  
+├── `test_control_flow.py` — Example of unit testing with `doctest`  
+└── `README.md` — Overview of Python basics and learning notes
+
+---
+
+### Python II: Debugging, Testing & Bioinformatics
+
+#### Part 1: Loops and List Comprehensions
+├── `lc1.py` — Basic loop and comprehension tasks  
+├── `lc2.py` — Advanced comprehension and conditionals  
+├── `dictionary.py` — Using dictionaries and sets  
+└── `tuple.py` — Tuple manipulations and unpacking  
+
+#### Part 2: Writing a Program with Control Flows
+├── `cfexercises1.py` — Updated as a standalone module  
+└── Demonstrates structured `main()` and clean I/O handling  
+
+#### Part 3: Align DNA Sequences
+├── `align_seqs.py` — Program to find the best alignment between two DNA sequences  
+├── `DNA_seqs.csv` — Input file with two example DNA sequences  
+└── `best_alignment.txt` — Output file containing best alignment and score  
+
+#### Part 4: The Missing Oaks Problem
+├── `oaks_debugme.py` — Debugging exercise to find and fix logical errors  
+├── `TestOaksData.csv` — Input data for testing tree names  
+└── `JustOaksData.csv` — Output with oak species only  
+
+#### Part 5: Testing and Debugging Practice
+├── `test_control_flow.py` — Example doctests for control flow functions  
+└── `debugme.py` — Used for practicing `pdb` and `ipdb` debugging  
+
+#### Part 6: Numerical Computing with NumPy
+├── `numpy_practice.py` — Practice with array creation, reshaping, and preallocation  
+├── `matrix_operations.py` — Basic operations on 2D arrays and matrices  
+└── Notes on `numpy`, `scipy`, and performance optimisation  
+
