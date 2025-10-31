@@ -1,3 +1,7 @@
 *~ 
 *.tmp
-week1/Sandbox/
+*.code-workspace
+
+week*/[Ss]andbox/*
+
+venv/

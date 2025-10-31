@@ -162,3 +162,116 @@ Each week builds up from basic scripting and logic to debugging, testing, and ha
 ├── `matrix_operations.py` — Basic operations on 2D arrays and matrices  
 └── Notes on `numpy`, `scipy`, and performance optimisation  
 
+
+
+
+## Week 3: Control Flow, Functions, Vectorization & File I/O
+
+### Overview
+
+Week 3 focuses on the foundations of **structured programming in R**. Students learn how to control program logic, create modular functions, and use vectorized operations for efficient computation.
+
+### Key Topics
+
+* Control flow (`if`, `for`, `while`, `break`, `next`)
+* Writing reusable functions
+* Vectorized vs. loop-based operations
+* Reading and writing data files (CSV)
+* Basic simulation (Tree height, Ricker model)
+
+### Outcomes
+
+By the end of this week, students can:
+
+* Write clean, modular R functions.
+* Use control structures effectively for logical flow.
+* Compare loop and vectorized performance.
+* Conduct simple file I/O operations.
+
+### Example Scripts
+
+| Script         | Description                                    |
+| -------------- | ---------------------------------------------- |
+| `TreeHeight.R` | Calculates tree height from distance and angle |
+| `Vectorize1.R` | Compares loop vs. vectorized operations        |
+| `Ricker.R`     | Population model simulation                    |
+| `basic_io.R`   | Demonstrates reading and writing CSVs          |
+
+---
+
+## Week 4: Data Wrangling, Visualization & Statistical Analysis
+
+### Overview
+
+Week 4 builds upon previous programming skills, emphasizing **data manipulation**, **performance optimization**, and **statistical modeling**. Students explore efficient computation using the `apply` family, generate publication-quality plots with `ggplot2`, and perform basic statistical analyses.
+
+### Key Topics
+
+* Data reshaping (wide ↔ long)
+* Efficient computation using `apply`, `lapply`, `sapply`
+* Pre-allocation and vectorization
+* Error handling (`try()`) and debugging (`browser()`)
+* Linear models and permutation tests
+* Advanced plotting with `ggplot2`
+
+### Outcomes
+
+By the end of this week, students can:
+
+* Clean and reshape complex datasets.
+* Build and analyze statistical models.
+* Implement vectorized, efficient workflows.
+* Create professional data visualizations.
+* Debug and handle errors in R scripts.
+
+### Example Scripts
+
+| Script                 | Description                                |
+| ---------------------- | ------------------------------------------ |
+| `DataWrang.R`          | Reshape species abundance data             |
+| `apply1.R`, `apply2.R` | Use `apply` family for matrix operations   |
+| `PP_Regress.R`         | Predator-prey regression and visualization |
+| `Florida.R`            | Permutation test and climate data plotting |
+| `Girko.R`              | Random matrix eigenvalue simulation        |
+
+---
+
+## Repository Navigation
+
+| Folder     | Description                                 |
+| ---------- | ------------------------------------------- |
+| `week1/`   | Introduction to R and command-line basics   |
+| `week2/`   | Reproducible workflows and scripting        |
+| `week3/`   | Control flow, functions, and vectorization  |
+| `week4/`   | Data wrangling, visualization, and analysis |
+| `results/` | Output figures, CSVs, and PDFs              |
+
+---
+
+## How to Run
+
+1. Clone this repository:
+
+   ```bash
+   git clone https://github.com/<username>/CMEECourseWork.git
+   ```
+2. Navigate to a specific week:
+
+   ```bash
+   cd CMEECourseWork/week3/code
+   ```
+3. Run any R script:
+
+   ```bash
+   Rscript scriptname.R
+   ```
+
+---
+
+## Author
+
+**Name:** Yijia Yao
+
+**Course:** CMEECourseWork
+
+**Contact:** yijia.yao@ucl.ac.uk
