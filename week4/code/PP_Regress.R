@@ -57,13 +57,13 @@ write_csv(regression_results, "../results/PP_Regress_Results.csv")
 
 # --------------------------
 # Create plot
-# --------------------------
+
 pp_plot <- ggplot(pp_data_clean,
                   aes(x = Prey.mass, y = Predator.mass,
                       colour = Predator.lifestage)) +
   geom_point(alpha = 0.6, size = 1.8, shape = 3) +
-  geom_smooth(method = "lm", se = TRUE,
-              fill = "grey70", alpha = 0.3, linewidth = 0.7) +
+  geom_smooth(method = "lm", se = FALSE,
+              linewidth = 0.7) +
   scale_x_log10(name = "Prey Mass in grams",
                 breaks = 10^seq(-7, 2, by = 2),
                 labels = scales::scientific_format(digits = 2)) +
@@ -90,10 +90,11 @@ pp_plot <- ggplot(pp_data_clean,
     legend.title = element_text(size = 9),
     legend.text = element_text(size = 8),
     panel.grid.minor = element_blank(),
-    panel.grid.major = element_line(size = 0.3, linetype = "dotted"),
+    panel.grid.major = element_line(linewidth = 0.3, linetype = "dotted"),
     axis.text = element_text(size = 8),
     axis.title = element_text(size = 10)
   )
+
 
 # --------------------------
 # Save plot in multiple formats
@@ -110,23 +111,4 @@ cat("redator-prey regression analysis complete!\n")
 cat("Results saved to: ../results/PP_Regress_Results.csv\n")
 cat("Plot saved to: ../results/PP_Regress_Improved.pdf and .png\n")
 cat("Total models fitted:", nrow(regression_results), "\n")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

@@ -1,8 +1,8 @@
 # test whether the temperature in Florida rises over time (Permutation test)
 
-
 rm(list = ls())
 load("../data/KeyWestAnnualMeanTemperature.RData")
+
 # Check data
 ls()
 class(ats)
@@ -47,10 +47,11 @@ pdf(output_pdf, width = 7, height = 8)
 # Figure 1: Trend of Temperature changes
 par(mfrow = c(2, 1), mar = c(4, 4, 3, 1))
 plot(ats$Year, ats$Temp, type = "l", col = "steelblue", lwd = 2,
-     xlab = "Year", ylab = "Mean Annual Temperature (°C)",
-     main = "Key West Annual Mean Temperature (1901–2000)")
+     xlab = "Year", ylab = "Mean Annual Temperature (deg C)",
+     main = "Key West Annual Mean Temperature (1901-2000)")
 abline(lm(Temp ~ Year, data = ats), col = "darkred", lwd = 2)
 legend("topleft", legend = sprintf("r = %.3f", r_obs), bty = "n")
+
 
 # Figure 2: Distribution of Permutation Results
 hist(r_perm, breaks = 40, col = "lightgray", border = "white",

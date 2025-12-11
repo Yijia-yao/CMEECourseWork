@@ -24,7 +24,7 @@ PreallocFun <- function(x) {
 system.time(PreallocFun(10))
 
 print("Unallocated time")
-print(system.time(NoPrealloc(10000)))
+print(system.time(NoPreallocFun(1000)))
 
 print("Pre-allocated time")
-print(system.time(Prealloc(10000)))
+print(system.time(PreallocFun(1000)))

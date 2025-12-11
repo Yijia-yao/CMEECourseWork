@@ -1,6 +1,8 @@
 # Use try() to catch errors and avoid program interruptions
 
 
+# Use try() to catch errors and avoid program interruptions
+
 doit <- function(x) {
   temp_x <- sample(x, replace = TRUE)
   
@@ -11,20 +13,17 @@ doit <- function(x) {
   }
 }
 
-
 set.seed(1345)
 popn <- rnorm(50)
 hist(popn)
 
-lapply(1:15, function(i) doit(popn))
+dummy <- try(lapply(1:15, function(i) doit(popn)), silent = TRUE)
 
-
-result <- lapply(1:15, function(i) try(doit(popn), FALSE))
+result <- lapply(1:15, function(i) try(doit(popn), silent = FALSE))
 class(result)
-result
 print(result)
 
-result <- vector("list", 15) #Preallocate/Initialize
-for(i in 1:15) {
-    result[[i]] <- try(doit(popn), FALSE)
-    }
+result <- vector("list", 15) # Preallocate/Initialize
+for (i in 1:15) {
+  result[[i]] <- try(doit(popn), silent = FALSE)
+}

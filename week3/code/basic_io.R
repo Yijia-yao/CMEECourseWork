@@ -3,7 +3,7 @@
 
 
 # Read data (with header)
-MyData <- read.csv("week3/data/trees.csv", header = TRUE)
+MyData <- read.csv("../data/trees.csv", header = TRUE)
 
 
 # Write the data as a new CSV file
