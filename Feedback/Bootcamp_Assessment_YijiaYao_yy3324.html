@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Bootcamp_Assessment_YijiaYao_yy3324</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Bootcamp_Assessment_YijiaYao_yy3324</h1>
+</header>
+<h1 id="bootcamp-assessment-yijia-yao">Bootcamp Assessment: Yijia
+Yao</h1>
+<h2 id="execution-results">Execution results</h2>
+<ul>
+<li>Scripts tested: 47<br />
+</li>
+<li>Successful: 42<br />
+</li>
+<li>With errors: 5</li>
+</ul>
+<h2 id="script-specific-feedback">Script-Specific Feedback</h2>
+<blockquote>
+<p>Representative scripts chosen to cover: strong examples, assigned
+scripts, execution issues, and common style/robustness problems.</p>
+</blockquote>
+<h3 id="csvtospace.sh">csvtospace.sh</h3>
+<p>Status: <strong>Present; not validated (ran with missing argument);
+expected output missing by naming</strong></p>
+<p>Evidence (from LOG): - Exit code: 1 (ran with no arguments) - Missing
+from expected list: No (expected assigned) - Tool warnings: — - Output
+validation: Missing expected output <code>**/*_space.txt</code></p>
+<p>Rubric relevance: - Criterion 2 - Criterion 3 - Criterion 8 -
+Criterion 9</p>
+<ul>
+<li>Good argument checking + helpful usage message (good for Criterion
+8).</li>
+<li>Output filename uses <code>.space.txt</code> not
+<code>*_space.txt</code>, so automated expected output check fails.</li>
+</ul>
+<p>Improvement suggestion: - Match required naming:
+<code>outfile="${infile%.csv}_space.txt"</code> (underscore). - Consider
+a default demo input (or a small bundled test CSV) when no args are
+provided <strong>only if allowed</strong>; otherwise, ensure final
+submission includes at least one generated <code>*_space.txt</code> file
+in the correct place.</p>
+<hr />
+<h3 id="r-practice-for-the-2class.r">R Practice for the 2class.R</h3>
+<p>Status: <strong>Present; not runnable under harness due to filename
+with spaces</strong></p>
+<p>Evidence (from LOG): - Exit code: 2 - Missing from expected list: Not
+in expected list (extra practice file) - Tool warnings: — - Output
+validation: N/A</p>
+<p>Rubric relevance: - Criterion 2 - Criterion 1</p>
+<ul>
+<li>The error is from the runner calling
+<code>Rscript ... R Practice for the 2class.R</code> without quotes, so
+R sees <code>R</code> as the script name
+(<code>cannot open file 'R'</code>).</li>
+<li>This is a repo hygiene/portability issue: filenames with spaces tend
+to break automation.</li>
+</ul>
+<p>Improvement suggestion: - Rename to <code>R_Practice_2class.R</code>
+(or similar) and keep script names space-free.</p>
+<hr />
+<h3 id="concatenatetwofiles.sh">ConcatenateTwoFiles.sh</h3>
+<p>Status: <strong>Present; not validated (ran with missing
+arguments)</strong></p>
+<p>Evidence (from LOG): - Exit code: 1 (ran with no args) - Missing from
+expected list: No (expected taught) - Tool warnings: — - Output
+validation: N/A</p>
+<p>Rubric relevance: - Criterion 2 - Criterion 8</p>
+<ul>
+<li>Correct basic approach and clear usage message.</li>
+<li>Automated runner did not supply args; so it fails in a “clean run”
+harness.</li>
+</ul>
+<p>Improvement suggestion: - Add a tiny self-test mode when
+<code>$# == 0</code> (e.g., create two temporary files, concatenate,
+then clean up), <strong>or</strong> provide a wrapper/Make target used
+by the harness (if that is the course convention). At minimum, document
+expected invocation in the week README with an example command.</p>
+<hr />
+<h3 id="countlines.sh">CountLines.sh</h3>
+<p>Status: <strong>Present; not validated (ran with missing
+argument)</strong></p>
+<p>Evidence (from LOG): - Exit code: 1 - Missing from expected list: No
+(expected taught) - Tool warnings: — - Output validation: N/A</p>
+<p>Rubric relevance: - Criterion 2 - Criterion 8</p>
+<ul>
+<li>Helpful usage message; correct core logic
+(<code>wc -l &lt; "$1"</code>).</li>
+</ul>
+<p>Improvement suggestion: - Same as above: add a non-interactive demo
+mode or ensure your README includes a one-line example that a runner
+could follow.</p>
+<hr />
+<h3 id="florida.r">Florida.R</h3>
+<p>Status: <strong>Runs successfully</strong></p>
+<p>Evidence (from LOG): - Exit code: 0 - Missing from expected list: No
+(expected assigned) - Tool warnings: Not flagged in this run section -
+Output validation: Not part of expected outputs list; however
+<code>week4/results</code> contains <code>Florida_Report.pdf</code> and
+related outputs.</p>
+<p>Rubric relevance: - Criterion 2 - Criterion 9 - Criterion 10</p>
+<ul>
+<li>Clear evidence of completing and running an assigned analysis
+script; outputs appear to be produced (PDFs present in
+<code>week4/results</code>).</li>
+</ul>
+<p>Improvement suggestion: - Avoid committing generated
+<code>results/</code> outputs to Git unless explicitly required (move
+them to an ignored <code>results/</code> with
+<code>.gitkeep</code>).</p>
+<hr />
+<h3 id="treeheight.r">TreeHeight.R</h3>
+<p>Status: <strong>Runs successfully</strong></p>
+<p>Evidence (from LOG): - Exit code: 0 - Missing from expected list: No
+(expected taught) - Tool warnings: — - Output validation: N/A</p>
+<p>Rubric relevance: - Criterion 2 - Criterion 9</p>
+<ul>
+<li>Script runs cleanly and produces output. Good baseline for Criterion
+2.</li>
+</ul>
+<p>Improvement suggestion: - Add a short header comment describing
+inputs/outputs and a sample invocation (also helps Criterion 4).</p>
+<hr />
+<h3 id="tautocorr.r">TAutoCorr.R</h3>
+<p>Evidence (from LOG): - Exit code: 0 - Missing from expected list:
+(Assessed as groupwork assigned; present) - Tool warnings:
+package-loading notes - Output validation: Produces
+<code>../results/autocorr_results.txt</code> and
+<code>../results/permutation_histogram.png</code></p>
+<p>Specification alignment: - <strong>Mostly matches</strong>:
+successive-year correlation, permutation null, p-value reporting,
+non-interactive run, relative data path</p>
+<p>Algorithmic evaluation: - Correctly forms <code>(n-1)</code> adjacent
+pairs and computes <code>cor(temp[1:(n-1)], temp[2:n])</code> -
+Correctly permutes the temperature series and recomputes the
+adjacent-year correlation for each permutation - Sensible Monte Carlo
+size (<code>nperm = 10000</code>) and fixed seed</p>
+<p>Conceptual understanding: - Shows clear understanding that temporal
+order matters and permutation breaks the temporal structure to generate
+a null distribution.</p>
+<p>Statistical correctness: - Uses Pearson correlation via
+<code>cor()</code> (acceptable). - Uses <strong>two-sided</strong>
+permutation p-value based on
+<code>abs(perm_corrs) &gt;= abs(real_corr)</code>.<br />
+The spec text suggests “fraction ≥ observed coefficient” (often
+one-sided). Two-sided is defensible, but should be stated explicitly in
+the write-up.</p>
+<p>Rubric relevance: - Criterion 2 - Criterion 3 - Criterion 8 -
+Criterion 9 - Criterion 10 - Criterion 11</p>
+<p>Improvement suggestion: - Add <code>report/TAutoCorr.tex</code> (and
+compile to PDF if required) interpreting <code>real_corr</code>, the
+permutation distribution, and the p-value definition (one- vs
+two-sided). - Avoid <code>install.packages()</code> inside the script
+for assessment runs; instead, list packages in README and fail
+gracefully with a clear message if missing.</p>
+<hr />
+<h2 id="detailed-evaluation-tautocorr.r">Detailed Evaluation:
+TAutoCorr.R</h2>
+<h3 id="a.-specification-alignment">A. Specification Alignment</h3>
+<p>Required/expected elements and alignment:</p>
+<ul>
+<li><strong>Relative path data loading</strong>: uses
+<code>../data/KeyWestAnnualMeanTemperature.RData</code> ✅</li>
+<li><strong>Successive-year pairs (n-1 pairs)</strong>: uses
+<code>temp[1:(n-1)]</code> and <code>temp[2:n]</code> ✅</li>
+<li><strong>Observed correlation stored and reported</strong>:
+<code>real_corr &lt;- cor(...)</code>; reported via saved text/plot
+✅</li>
+<li><strong>Permutation analysis</strong>: <code>nperm = 10000</code>;
+<code>sample(temp)</code> per permutation; recompute correlation ✅</li>
+<li><strong>Permutation-based p-value</strong>: computed and reported ✅
+<ul>
+<li>Note: computed as <strong>two-sided</strong> exact Monte Carlo
+p-value with +1 correction (good practice).</li>
+</ul></li>
+<li><strong>Must not use standard correlation p-value as final</strong>:
+does not use <code>cor.test()</code> ✅</li>
+</ul>
+<p>Overall: <strong>Matches core computational specification; missing
+required reporting artefact evidence (.tex).</strong></p>
+<hr />
+<h3 id="b.-conceptual-understanding-of-autocorrelation">B. Conceptual
+Understanding of Autocorrelation</h3>
+<ul>
+<li>Correct focus on <strong>lag-1</strong> dependency between
+successive years.</li>
+<li>Demonstrates the right null logic: break temporal ordering via
+permutation.</li>
+<li>Clear distinction between an observed statistic and its null
+distribution.</li>
+</ul>
+<p>Alignment: - Criterion 2: strong (code runs, produces outputs) -
+Criterion 9: strong (method choice and structure)</p>
+<h3 id="c.-algorithmic-implementation-depth-vs-example-solution">C.
+Algorithmic Implementation Depth (vs example solution)</h3>
+<ul>
+<li>Student: direct computation via <code>cor()</code> on shifted
+vectors; loop over permutations; stores coefficients.</li>
+<li>Example: wraps correlation in <code>autocor_test()</code> and uses
+<code>cor.test(..., method="spearman")$estimate</code>; produces PDF
+plot of null density.</li>
+</ul>
+<p>Depth assessment: - Indexing: correct and clear ✅ - Preallocation:
+correct (<code>perm_corrs &lt;- numeric(nperm)</code>) ✅ - Efficiency:
+fine for 10k perms ✅ - Plot clarity: good; histogram with observed
+marker ✅</p>
+<hr />
+<h3 id="d.-statistical-computational-rigor">D. Statistical &amp;
+Computational Rigor</h3>
+<ul>
+<li>Uses Pearson correlation; acceptable for the assignment.</li>
+<li>Uses a Monte Carlo <strong>two-sided</strong> p-value with a
+small-sample correction (+1 / (nperm+1)), which is statistically
+careful.</li>
+<li>Should explicitly state p-value definition in the report.</li>
+</ul>
+<hr />
+<h3 id="e.-error-handling-robustness-criterion-8">E. Error Handling
+&amp; Robustness (Criterion 8)</h3>
+<p>Current robustness: - Creates <code>../results</code> directory if
+absent ✅ - Does <strong>not</strong> guard <code>load(data_path)</code>
+with an existence check (will crash if data missing) ⚠ - No explicit
+check for very short series (<code>n &lt; 3</code>) ⚠</p>
+<p>Suggested minimal guards: -
+<code>if (!file.exists(data_path)) stop("...")</code> -
+<code>if (n &lt; 3) stop("Time series too short for lag-1 correlation")</code></p>
+<hr />
+<h3 id="f.-comparison-with-example-solution">F. Comparison with Example
+Solution</h3>
+<h4 id="similarities">Similarities</h4>
+<ul>
+<li>Both compute lag-1 correlation on shifted vectors</li>
+<li>Both generate null distribution via permutation (10k)</li>
+<li>Both produce a visual summary</li>
+</ul>
+<h4 id="key-omissions-relative-to-spec-example">Key omissions (relative
+to spec + example)</h4>
+<ul>
+<li>No time-series/lagged scatter plots</li>
+</ul>
+<h4 id="conceptual-gaps">Conceptual gaps</h4>
+<ul>
+<li>None major; p-value sidedness should be clearly justified</li>
+</ul>
+<h4 id="improvements-beyond-example-if-any">Improvements beyond example
+(if any)</h4>
+<ul>
+<li>Two-sided p-value with +1 correction (careful Monte Carlo
+practice)</li>
+<li>Publication-style histogram + saved plain-text summary</li>
+</ul>
+<h2 id="overall-feedback">Overall feedback</h2>
+<p><strong>What’s working well</strong> - Clear documentation coverage
+overall: strong README presence and high comment ratio in R scripts. -
+Strong conceptual + algorithmic implementation in
+<code>TAutoCorr.R</code> (clean lag-1 computation + permutation null +
+reproducible seed). - Helpful basic error handling for CLI scripts
+(usage messages, exit codes).</p>
+<p><strong>Highest-impact improvements</strong> -
+<strong>Completeness:</strong> Many expected taught Python scripts are
+missing. If this reflects an organisational issue (e.g., scripts in
+another location or branch), congoodate them into the expected structure
+before final submission/export. - <strong>Automation
+robustness:</strong> Avoid filenames with spaces; ensure scripts can run
+under non-interactive harness conditions (either via documented CLI
+usage + test inputs, or a simple “demo mode” when no args are supplied,
+if permitted). - <strong>Reporting requirement:</strong> Ensure report
+explicitly defines the permutation p-value you used (one- vs
+two-sided).</p>
+<h2 id="priority-fixes">Priority fixes</h2>
+<ol type="1">
+<li><strong>TAutoCorr write-up:</strong> add <code>TAutoCorr.tex</code>
+(and compiled PDF if required) interpreting correlation + permutation
+p-value.</li>
+<li><strong>csvtospace expected output:</strong> rename output to
+<code>*_space.txt</code> and include a generated example output in the
+correct place if required.</li>
+<li><strong>Script naming:</strong> remove spaces from filenames (e.g.,
+<code>R_Practice_2class.R</code>).</li>
+<li><strong>Repo hygiene:</strong> remove large lecture
+<code>.pptx</code> files and commit results only if explicitly required;
+expand <code>.gitignore</code> (R, Python cache, results).</li>
+<li><strong>Completeness sweep:</strong> re-add missing expected Python
+taught scripts if they exist elsewhere (backup/branch) and ensure they
+are in the expected week/code structure.</li>
+</ol>
+<h2 id="summary">Summary</h2>
+<p>Good work, showing clear evidence of learning and problem-solving,
+but incomplete coverage and some automation/readiness issues.</p>
+<ul>
+<li><strong>Strengths:</strong> good documentation, several assigned
+scripts run successfully.</li>
+<li><strong>Main gaps:</strong> many expected taught Python scripts
+missing; some scripts fail under automation due to missing args or
+filename spaces.</li>
+</ul>
+<h2 id="mark-classification">Mark classification</h2>
+<!-- Total Mark: **67/100**   -->
+<p>Classification: <strong>Merit</strong></p>
+</body>
+</html>
