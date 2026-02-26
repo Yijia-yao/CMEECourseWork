@@ -1,0 +1,12 @@
+#!/bin/bash
+#PBS -N neutral
+#PBS -l select=1:ncpus=1:mem=4gb
+#PBS -l walltime=12:00:00
+#PBS -J 1-100
+#PBS -o Log/neutral.o
+#PBS -e Log/neutral.e
+
+cd "$PBS_O_WORKDIR"
+mkdir -p Log Data Results
+
+Rscript Code/yy3324_HPC_2025_neutral_cluster.R

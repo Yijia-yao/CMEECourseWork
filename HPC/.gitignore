@@ -1,0 +1,12 @@
+# R workspace
+.Rhistory
+.RData
+.Rproj.user/
+
+# OS files
+.DS_Store
+
+# Temporary cluster outputs
+*.tmp
+
+Code/dev_test_local.R
