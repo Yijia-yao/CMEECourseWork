@@ -4,5 +4,17 @@
 
 week*/[Ss]andbox/*
 
-venv/
+# LaTeX
+*.aux
+*.log
+*.fdb_latexmk
+*.fls
+*.synctex.gz
 
+# Python
+__pycache__/
+*.pyc
+
+# virtual env
+venv/
+.env

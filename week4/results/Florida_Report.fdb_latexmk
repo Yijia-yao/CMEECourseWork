@@ -1,7 +1,7 @@
 # Fdb version 4
-["pdflatex"] 1761868735.89622 "/home/yijia-yao/Documents/CMEECourseWork/week4/results/Florida_Report.tex" "Florida_Report.pdf" "Florida_Report" 1761868736.21125 0
+["pdflatex"] 1773204533.90237 "/home/yijia-yao/Documents/CMEECourseWork/week4/results/Florida_Report.tex" "Florida_Report.pdf" "Florida_Report" 1773204534.19878 0
   "/etc/texmf/web2c/texmf.cnf" 1761868339.68047 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/yijia-yao/Documents/CMEECourseWork/week4/results/Florida_Report.tex" 1761867592.10108 3637 caa5a6b7aba829c0274aa7879616e2f1 ""
+  "/home/yijia-yao/Documents/CMEECourseWork/week4/results/Florida_Report.tex" 1761871438.36292 3637 caa5a6b7aba829c0274aa7879616e2f1 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -51,10 +51,10 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1707919699 40399 f2c302f7d2af602abb742093540a5834 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1761868356.17403 5472669 54eaf61a88b6b7896ebd0dac973cb29c ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1761868386 8214785 909d2687e76bff57884396136c0f0e08 ""
-  "Florida_PermutationDist.png" 1761868726.85017 12874 6c90679714965a74f896f9aa34ffca7f ""
-  "Florida_Report.aux" 1761868736.18613 469 687a8842546b1951080abd5cdd3efa70 "pdflatex"
-  "Florida_Report.tex" 1761867592.10108 3637 caa5a6b7aba829c0274aa7879616e2f1 ""
-  "Florida_TempTrend.png" 1761868726.84017 43711 2125180e25b9e3c4d4eece3e416ab4c4 ""
+  "Florida_PermutationDist.png" 1765466436.4851 13450 a7e287be61d8ef5ebd27d23530f53484 ""
+  "Florida_Report.aux" 1773204534.1732 469 687a8842546b1951080abd5cdd3efa70 "pdflatex"
+  "Florida_Report.tex" 1761871438.36292 3637 caa5a6b7aba829c0274aa7879616e2f1 ""
+  "Florida_TempTrend.png" 1765466436.4251 43711 2125180e25b9e3c4d4eece3e416ab4c4 ""
   (generated)
   "Florida_Report.aux"
   "Florida_Report.log"
