@@ -1,0 +1,5 @@
+PopBio_units,cubic,gompertz,logistic,quadratic
+CFU,14,32,60,6
+DryWeight,2,1,5,0
+N,19,24,38,8
+OD_595,46,11,21,10

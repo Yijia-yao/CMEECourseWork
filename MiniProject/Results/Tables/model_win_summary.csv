@@ -1,0 +1,5 @@
+model,wins_aic,wins_bic,total_curves_aic,total_curves_bic
+cubic,81,74,297,297
+gompertz,68,68,297,297
+logistic,124,127,297,297
+quadratic,24,28,297,297

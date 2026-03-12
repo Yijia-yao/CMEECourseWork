@@ -1,0 +1,24 @@
+# ---- Python ----
+__pycache__/
+*.py[cod]
+
+# virtual environments
+venv/
+.venv/
+
+# ---- OS ----
+.DS_Store
+
+# ---- LaTeX build artifacts ----
+*.aux
+*.log
+*.out
+*.toc
+*.bbl
+*.blg
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+
+# If you generate auto wordcount file
+TheReport/wordcount.tex

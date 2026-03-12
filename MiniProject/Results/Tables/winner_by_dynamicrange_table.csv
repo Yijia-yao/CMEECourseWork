@@ -1,0 +1,5 @@
+dyn_quartile,cubic,gompertz,logistic,quadratic
+Q1 (low),39,5,16,15
+Q2,22,26,26,0
+Q3,16,13,44,1
+Q4 (high),4,24,38,8

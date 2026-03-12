@@ -1,0 +1,15 @@
+model,evidence_strength,n_curves,total,pct_within_winner
+cubic,2–7 (moderate),14,81,17.3
+cubic,7–10 (strong),10,81,12.3
+cubic,<2 (weak),24,81,29.6
+cubic,>10 (very strong),33,81,40.7
+gompertz,2–7 (moderate),17,68,25.0
+gompertz,7–10 (strong),12,68,17.6
+gompertz,<2 (weak),35,68,51.5
+gompertz,>10 (very strong),4,68,5.9
+logistic,2–7 (moderate),31,124,25.0
+logistic,7–10 (strong),9,124,7.3
+logistic,<2 (weak),61,124,49.2
+logistic,>10 (very strong),23,124,18.5
+quadratic,2–7 (moderate),1,24,4.2
+quadratic,<2 (weak),23,24,95.8
