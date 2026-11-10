@@ -9,4 +9,4 @@
 cd "$PBS_O_WORKDIR"
 mkdir -p Log Data Results
 
-Rscript Code/yy3324_HPC_2025_neutral_cluster.R
+Rscript Code/neutral_cluster.R

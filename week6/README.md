@@ -79,4 +79,4 @@ Example datasets are stored in handout/ subfolders. Use paths like:
 
 ## Authors & Contact
 
-    Yijia Yao – Lecture material compilation and documentation – yijia.yao25@imperial.ac.uk
+    Yijia Yao – Lecture material compilation and documentation

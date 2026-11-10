@@ -1,6 +1,18 @@
-# Computing Miniproject — Microbial population growth model comparison
+# Computing MiniProject: microbial growth model comparison
 
-This mini-project compares alternative mathematical models for microbial population growth curves. I fit two phenomenological polynomial models (quadratic, cubic) and two sigmoid growth models (logistic, Gompertz), and evaluate model support within each curve using AIC/BIC and ΔAIC evidence strength. The workflow is fully reproducible from a single command and produces all tables/figures plus a compiled LaTeX report.
+## Research question
+
+Which of four common curve families—quadratic, cubic, logistic or Gompertz—best describes microbial population growth across a heterogeneous collection of published growth curves, and how decisive is that preference?
+
+This assessed project demonstrates a complete scientific Python workflow: data preparation, exploratory analysis, least-squares fitting, information-criterion comparison, diagnostic summaries, figure production and compilation of a LaTeX report. Comparisons are made within curves because response units differ across studies.
+
+## Analysis population and verified results
+
+A curve is a unique `Species × Temp × Medium × Citation × Rep` combination. The prepared data contain **305 unique curves**. Four models were attempted per curve (1,220 curve–model combinations): 1,178 fits succeeded and 42 were skipped where the time points could not identify the parameters. **297 curves had at least one comparable fit and therefore contributed to the AIC/BIC winner summaries.**
+
+Among those 297 curves, logistic was selected most often (AIC: 124; BIC: 127), followed by cubic (81; 74), Gompertz (68; 68) and quadratic (24; 28). For 143 curves, the winning model was less than two AIC units ahead of the runner-up, so almost half of the apparent wins were weakly distinguished. These values come directly from the tracked tables and report.
+
+The analysis compares relative support among four candidates; it does not claim that the most frequently selected curve is a universal biological mechanism.
 
 ---
 
@@ -14,6 +26,7 @@ MiniProject/
 │   ├── Figures/          PDF figures
 │   └── Tables/           CSV outputs
 └── TheReport/            LaTeX report (compiled to report.pdf)
+└── requirements.txt      minimal Python dependencies
 ```
 
 ---
@@ -77,7 +90,9 @@ sudo apt-get install texlive-latex-base texlive-latex-recommended texlive-bibtex
 From `MiniProject/`:
 
 ```bash
+python -m venv venv
 source venv/bin/activate
+python -m pip install -r requirements.txt
 python Code/run_MiniProject.py
 ```
 
@@ -122,6 +137,7 @@ Final report output:
 
 ## Notes
 
-* Curves are defined as unique `Species × Temp × Medium × Citation × Rep`.
+* The dataset contains 305 unique curves; 297 have an identifiable AIC/BIC winner.
 * Model comparison is performed **within curves** because PopBio is measured in heterogeneous units across studies.
 * Some curve–model combinations are skipped when parameters are not identifiable (e.g., too few unique time points).
+* AIC/BIC rank the candidate models; they do not establish that any candidate is biologically true.
