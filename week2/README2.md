@@ -157,7 +157,6 @@ Overall, this week really changed how I think about programming — I’m not ju
 
 Author: Yijia Yao
 
-Email: yijia.yao25@imperial.ac.uk
 
 Course: MSc Computational Methods in Ecology and Evolution
 

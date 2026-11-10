@@ -1,5 +1,5 @@
 #!/bin/sh
-# Author: yijia.yao25.@imperial.ac.uk
+# Author: Yijia Yao
 # Script: boilerplate.sh
 # Desc: simple boilerplate for shell scripts
 # Arguments: none

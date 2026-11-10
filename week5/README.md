@@ -70,4 +70,4 @@ The following R packages may be required (install via `install.packages()` if no
 
 ## Authors & Contact
 
-    Yijia Yao – Lecture material preparation and documentation – yijia.yao25@imperial.ac.uk
+    Yijia Yao – Lecture material preparation and documentation

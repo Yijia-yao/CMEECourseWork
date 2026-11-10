@@ -1,4 +1,25 @@
-# CMEE
+# CMEE computational coursework
+
+Coursework from the MSc in Computational Methods in Ecology and Evolution at Imperial College London. This repository is an honest record of training in scientific programming, statistics and reproducible analysis. It contains both assessed projects and smaller course exercises; the latter are not presented as independent research.
+
+## Selected work
+
+| Project | What it demonstrates | Main tools |
+| --- | --- | --- |
+| [Computing MiniProject](MiniProject/) | Reproducible comparison of quadratic, cubic, logistic and Gompertz models for microbial growth curves, including AIC/BIC model selection | Python, SciPy, NumPy, pandas, Matplotlib, Bash, LaTeX |
+| [HPC Programming](HPC/) | Stochastic ecological simulation using PBS job arrays on Imperial's CX3 cluster, followed by aggregation and visualisation | R, PBS, Bash, high-performance computing |
+| [Computing Bootcamp](BOOTCAMP.md) | Index of introductory Bash, Git, Python and R exercises | Bash, Git, Python, R |
+
+## Repository map and scope
+
+- `MiniProject/` — assessed scientific-computing project and reproducible report workflow.
+- `HPC/` — assessed HPC exercises; its README distinguishes course-provided framework code from my implementation.
+- `week1/`–`week6/` — bootcamp and statistics exercises, including supplied teaching material and datasets.
+- `Week16--Math/` — later mathematical-programming exercise.
+
+Personal assessment records and routine scheduler logs have been removed from this portfolio branch. Historical versions remain in Git history because the history has not been rewritten. This repository does not claim machine-learning, deep-learning or NLP experience beyond what is directly demonstrated by the files.
+
+## Weekly course notes
 
 This repository contains coursework and practical materials for the **Living Planet with Computational Methods in Ecology and Evolution (CMEE)** programme at **Imperial College London**.
 
@@ -150,8 +171,3 @@ Introduction to Generalized Linear Models (GLMs), including multiple distributio
 3. Load dependencies (e.g., `tidyverse`, `ggplot2`, `MASS`)  
 4. Read datasets from the appropriate handout subfolder  
 5. Run scripts to perform exercises  
-
----
-
-## Author
-- Yijia Yao email: yijia.yao25@imperial.ac.uk

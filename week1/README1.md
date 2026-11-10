@@ -429,7 +429,6 @@ It’s starting to feel like real computational science
 
 Author: Yijia Yao
 
-Email: yijia.yao25@imperial.ac.uk
 
 Course: MSc Computational Methods in Ecology and Evolution
 
